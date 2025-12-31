@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(209, 209, 209);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 200px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(230, 221, 255);
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  gap: 20px;
+  margin-right: 200px;
+}
+.item,
+.itemResult {
+  display: flex;
+  gap: 10px;
+}
+.item h5,
+.itemResult h5 {
+  width: 210px;
+}
+h5,
+p {
+  font-size: 22px;
+}
+#btnresult {
+  margin-top: 20px;
+  height: 40px;
+  width: 70%;
+  font-size: 17px;
+  background-color: rgb(63, 63, 243);
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+}
+#btnresult:hover {
+  width: 75%;
+  height: 42px;
+  cursor: pointer;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+  .container {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px 5px;
+    margin-top: 20px;
+  }
+  .block {
+    width: 70%;
+    padding: 10px 10px;
+  }
+  input {
+    padding: 5px 5px;
+    font-size: 12px;
+    height: 40px;
+  }
+  .main-title {
+    gap: 15px;
+    margin-right: 70px;
+  }
+  h5,
+  p {
+    font-size: 16px;
+  }
+
+  .itemResult {
+    display: flex;
+  }
+  #btnresult {
+    margin: 0;
+  }
+}

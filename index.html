@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header class="container header">
+      <h1 class="header">Калькулятор рассчёта зарплаты</h1>
+    </header>
+    <div class="container">
+      <div class="block">
+        <input id="input1" type="number" placeholder="Ставка в час" />
+        <input id="input2" type="number" placeholder="Отработанные дни" />
+        <input id="input3" type="number" placeholder="Отработанные ночи" />
+        <input id="input6" type="number" placeholder="Экстра дни" />
+        <input id="input4" type="number" placeholder="Отпускные" />
+        <input id="input5" type="number" placeholder="Праздничные дни" />
+        <button id="btnresult">Рассчитать</button>
+      </div>
+      <div class="main-title">
+        <div class="item">
+          <h5>Базовая зарплата</h5>
+          <p class="basicSalary">0</p>
+        </div>
+        <div class="item">
+          <h5>Бонус</h5>
+          <p class="bonus">35000</p>
+        </div>
+        <div class="item">
+          <h5>Кафетерия</h5>
+          <p class="cafeter">60263</p>
+        </div>
+        <div class="item">
+          <h5>Ночные смены 30%</h5>
+          <p class="nigth30">0</p>
+        </div>
+        <div class="item">
+          <h5>Экстра дни</h5>
+          <p class="extraText">0</p>
+        </div>
+        <div class="item">
+          <h5>Отпускные</h5>
+          <p class="vacationText">0</p>
+        </div>
+        <div class="item">
+          <h5>Праздничные дни</h5>
+          <p class="holidaysText">0</p>
+        </div>
+        <hr />
+        <div class="item">
+          <h5>Итого:</h5>
+          <p id="resultShow">0</p>
+        </div>
+      </div>
+      <div class="results">
+        <div class="itemResult">
+          <h5>Вычет налогов</h5>
+          <p class="netto">0</p>
+        </div>
+        <hr />
+        <div class="itemResult">
+          <h5>Итог</h5>
+          <p class="brutto">0</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
