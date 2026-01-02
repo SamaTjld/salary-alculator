@@ -4,8 +4,10 @@ const input3 = document.getElementById("input3");
 const input4 = document.getElementById("input4");
 const input5 = document.getElementById("input5");
 const input6 = document.getElementById("input6");
+const input7 = document.getElementById("input7");
 
 let basic = document.querySelector(".basicSalary");
+const bonus = document.querySelector(".bonus");
 const nigth30 = document.querySelector(".nigth30");
 const extraText = document.querySelector(".extraText");
 const holidaysText = document.querySelector(".holidaysText");
@@ -22,9 +24,12 @@ btnresult.onclick = function () {
   let vacations = Number(input4.value) || 0;
   let holidays = Number(input5.value) || 0;
   let extra = Number(input6.value) || 0;
+  let bonusSum = Number(input7.value);
 
   let basicSum = (days + night) * 8 * perHour;
   basic.textContent = basicSum;
+
+  bonus.textContent = bonusSum;
 
   let nightSum = night * 8 * perHour * 0.3;
   nigth30.textContent = Math.round(nightSum);
@@ -39,7 +44,13 @@ btnresult.onclick = function () {
   holidaysText.textContent = Math.round(holidaySum);
 
   const sum =
-    basicSum + 35000 + 60263 + nightSum + extraSum + vacationSum + holidaySum;
+    basicSum +
+    bonusSum +
+    60263 +
+    nightSum +
+    extraSum +
+    vacationSum +
+    holidaySum;
   resultShow.textContent = Math.round(sum);
 
   netto.textContent = Math.round(sum * 0.335);
