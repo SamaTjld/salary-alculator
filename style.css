@@ -96,12 +96,13 @@ p {
     margin-top: 20px;
   }
   .block {
-    width: 70%;
-    padding: 10px 10px;
+    width: 100%;
+    padding: 5px 50px;
   }
   input {
-    padding: 5px 5px;
-    font-size: 12px;
+    text-align: center;
+    padding: 15px 15px;
+    font-size: 18px;
     height: 40px;
   }
   .main-title {
