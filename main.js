@@ -5,6 +5,7 @@ const input4 = document.getElementById("input4");
 const input5 = document.getElementById("input5");
 const input6 = document.getElementById("input6");
 const input7 = document.getElementById("input7");
+const input8 = document.getElementById("input8");
 
 let basic = document.querySelector(".basicSalary");
 const bonus = document.querySelector(".bonus");
@@ -12,6 +13,7 @@ const nigth30 = document.querySelector(".nigth30");
 const extraText = document.querySelector(".extraText");
 const holidaysText = document.querySelector(".holidaysText");
 const vacationText = document.querySelector(".vacationText");
+const sickText = document.querySelector(".sickText");
 const btnresult = document.getElementById("btnresult");
 const resultShow = document.getElementById("resultShow");
 const netto = document.querySelector(".netto");
@@ -23,6 +25,7 @@ btnresult.onclick = function () {
   let night = Number(input3.value) || 0;
   let vacations = Number(input4.value) || 0;
   let holidays = Number(input5.value) || 0;
+  let sickdays = Number(input8.value) || 0;
   let extra = Number(input6.value) || 0;
   let bonusSum = Number(input7.value);
 
@@ -37,11 +40,14 @@ btnresult.onclick = function () {
   let extraSum = extra * 8 * perHour * 2;
   extraText.textContent = Math.round(extraSum);
 
-  const vacationSum = vacations * 8 * perHour * 1.1;
+  const vacationSum = vacations * 8 * perHour * 1.135;
   vacationText.textContent = Math.round(vacationSum);
 
-  let holidaySum = holidays * 8 * perHour * 1.1;
+  let holidaySum = holidays * 8 * perHour * 1.135;
   holidaysText.textContent = Math.round(holidaySum);
+
+  let sickSum = sickdays * 8 * perHour * 0.77;
+  sickText.textContent = Math.round(sickSum);
 
   const sum =
     basicSum +
@@ -50,7 +56,8 @@ btnresult.onclick = function () {
     nightSum +
     extraSum +
     vacationSum +
-    holidaySum;
+    holidaySum +
+    sickSum;
   resultShow.textContent = Math.round(sum);
 
   netto.textContent = Math.round(sum * 0.335);
